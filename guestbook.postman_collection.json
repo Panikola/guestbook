@@ -1,0 +1,511 @@
+{
+	"info": {
+		"name": "guestbook",
+		"_postman_id": "4c76be12-02f4-478b-87bc-0003ace60fe3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://guestbook.loc:81/api/feedback Get all feedback",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "jon",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/feedback?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"feedback"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/feedback Add feedback",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFiYmNkMmRjMWNlYmVhNzhiOTI2OTY0ZjdmZjdmNTI5ZmJmYzQzMzkzMzYyNTVhZjZiMDg3ZjE5ZmFiZDlkOGJhNGRlYTA1ZWU5MTJlNGUwIn0.eyJhdWQiOiIxIiwianRpIjoiMWJiY2QyZGMxY2ViZWE3OGI5MjY5NjRmN2ZmN2Y1MjlmYmZjNDMzOTMzNjI1NWFmNmIwODdmMTlmYWJkOWQ4YmE0ZGVhMDVlZTkxMmU0ZTAiLCJpYXQiOjE1MTk3MjU2NTYsIm5iZiI6MTUxOTcyNTY1NiwiZXhwIjoxNTUxMjYxNjU2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.PAnyjGp8cWJiDNinw6Sc3TOm7FyLwuSDZtXS4Yc-s-QCYjHFpcPYqAGmfGUFKC1lJ_WVS0StxBx0lHr43IJ98Id-zG8rpHNptQh--tmQI7MjSTH18AyW5koxxRErSMuZpDgTxXZOl-LuT44Fm7hJP86NzYxiusYm2JGfz1fs80v334uXw62H8ndthz1RoyypPZGGBkfV8E7DcsCoXdaqv1-3NMsxoeSGeQEaDDVRNMkekH-uzre4hJCc5H8vR2NRAiiVV0KOpiZBzKiUduVOvryXF1fDHDBVSOpHab53pWHyLnrY8we-cSklWkCWWd1gTMYMwidqcqFdYx8OYG7aNtGVXse8z9ZMr_qC7z8EpS-LE6WReB-j8SjbmufAzCvjc0dODs_MzeieuZJ46W_QcG440iPiDSVGpPvFyBgUWmQYXsO5ihrHwZh8_xWz1HcITARI8ije_PdudEfh6exjwrRDrRYJxTR0oBAcLP_lnLgujO6CfZSpKl97aZxigcy9L_ipIZN3iPYHyBfHgmS7_z8Yds1gAtHvXo4ANAQupmnBtegenB5X1r6SMaUvByDLOsTIXAa6bJ2DqeOZCFgRSNCJ91J4kCvny-KE2zBdB8SsOjHI13y8soIjjb1bbgGrMZEJ1dWZD8no3KS-67EKOEBs1fvAgWBXgae2oB18lH8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "body",
+							"value": "jjjjjjjjj",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/feedback?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"feedback"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/feedback/1 View feedback",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/feedback/1?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"feedback",
+						"1"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/feedback/1/reply Add reply",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFiYmNkMmRjMWNlYmVhNzhiOTI2OTY0ZjdmZjdmNTI5ZmJmYzQzMzkzMzYyNTVhZjZiMDg3ZjE5ZmFiZDlkOGJhNGRlYTA1ZWU5MTJlNGUwIn0.eyJhdWQiOiIxIiwianRpIjoiMWJiY2QyZGMxY2ViZWE3OGI5MjY5NjRmN2ZmN2Y1MjlmYmZjNDMzOTMzNjI1NWFmNmIwODdmMTlmYWJkOWQ4YmE0ZGVhMDVlZTkxMmU0ZTAiLCJpYXQiOjE1MTk3MjU2NTYsIm5iZiI6MTUxOTcyNTY1NiwiZXhwIjoxNTUxMjYxNjU2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.PAnyjGp8cWJiDNinw6Sc3TOm7FyLwuSDZtXS4Yc-s-QCYjHFpcPYqAGmfGUFKC1lJ_WVS0StxBx0lHr43IJ98Id-zG8rpHNptQh--tmQI7MjSTH18AyW5koxxRErSMuZpDgTxXZOl-LuT44Fm7hJP86NzYxiusYm2JGfz1fs80v334uXw62H8ndthz1RoyypPZGGBkfV8E7DcsCoXdaqv1-3NMsxoeSGeQEaDDVRNMkekH-uzre4hJCc5H8vR2NRAiiVV0KOpiZBzKiUduVOvryXF1fDHDBVSOpHab53pWHyLnrY8we-cSklWkCWWd1gTMYMwidqcqFdYx8OYG7aNtGVXse8z9ZMr_qC7z8EpS-LE6WReB-j8SjbmufAzCvjc0dODs_MzeieuZJ46W_QcG440iPiDSVGpPvFyBgUWmQYXsO5ihrHwZh8_xWz1HcITARI8ije_PdudEfh6exjwrRDrRYJxTR0oBAcLP_lnLgujO6CfZSpKl97aZxigcy9L_ipIZN3iPYHyBfHgmS7_z8Yds1gAtHvXo4ANAQupmnBtegenB5X1r6SMaUvByDLOsTIXAa6bJ2DqeOZCFgRSNCJ91J4kCvny-KE2zBdB8SsOjHI13y8soIjjb1bbgGrMZEJ1dWZD8no3KS-67EKOEBs1fvAgWBXgae2oB18lH8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "body",
+							"value": "admin reply",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/feedback/1/reply?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"feedback",
+						"1",
+						"reply"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/login user1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "1@user.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/login?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/login user2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "2@user.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/login?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/register user1 admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "user 1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "1@user.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "role[]",
+							"value": "admin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "role[]",
+							"value": "user",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/register?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/register user2 user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "user 2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "2@user.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "role[]",
+							"value": "admin",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "role[]",
+							"value": "user",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/register?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://guestbook.loc:81/api/user-info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFiYmNkMmRjMWNlYmVhNzhiOTI2OTY0ZjdmZjdmNTI5ZmJmYzQzMzkzMzYyNTVhZjZiMDg3ZjE5ZmFiZDlkOGJhNGRlYTA1ZWU5MTJlNGUwIn0.eyJhdWQiOiIxIiwianRpIjoiMWJiY2QyZGMxY2ViZWE3OGI5MjY5NjRmN2ZmN2Y1MjlmYmZjNDMzOTMzNjI1NWFmNmIwODdmMTlmYWJkOWQ4YmE0ZGVhMDVlZTkxMmU0ZTAiLCJpYXQiOjE1MTk3MjU2NTYsIm5iZiI6MTUxOTcyNTY1NiwiZXhwIjoxNTUxMjYxNjU2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.PAnyjGp8cWJiDNinw6Sc3TOm7FyLwuSDZtXS4Yc-s-QCYjHFpcPYqAGmfGUFKC1lJ_WVS0StxBx0lHr43IJ98Id-zG8rpHNptQh--tmQI7MjSTH18AyW5koxxRErSMuZpDgTxXZOl-LuT44Fm7hJP86NzYxiusYm2JGfz1fs80v334uXw62H8ndthz1RoyypPZGGBkfV8E7DcsCoXdaqv1-3NMsxoeSGeQEaDDVRNMkekH-uzre4hJCc5H8vR2NRAiiVV0KOpiZBzKiUduVOvryXF1fDHDBVSOpHab53pWHyLnrY8we-cSklWkCWWd1gTMYMwidqcqFdYx8OYG7aNtGVXse8z9ZMr_qC7z8EpS-LE6WReB-j8SjbmufAzCvjc0dODs_MzeieuZJ46W_QcG440iPiDSVGpPvFyBgUWmQYXsO5ihrHwZh8_xWz1HcITARI8ije_PdudEfh6exjwrRDrRYJxTR0oBAcLP_lnLgujO6CfZSpKl97aZxigcy9L_ipIZN3iPYHyBfHgmS7_z8Yds1gAtHvXo4ANAQupmnBtegenB5X1r6SMaUvByDLOsTIXAa6bJ2DqeOZCFgRSNCJ91J4kCvny-KE2zBdB8SsOjHI13y8soIjjb1bbgGrMZEJ1dWZD8no3KS-67EKOEBs1fvAgWBXgae2oB18lH8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://guestbook.loc:81/api/user-info?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "http",
+					"host": [
+						"guestbook",
+						"loc"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"user-info"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
