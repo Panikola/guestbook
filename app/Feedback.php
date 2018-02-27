@@ -12,4 +12,9 @@ class Feedback extends Model
     {
         return $this->hasMany('App\Reply');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

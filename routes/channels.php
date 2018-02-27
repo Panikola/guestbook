@@ -11,6 +11,12 @@
 |
 */
 
+use App\Reply;
+
 Broadcast::channel('App.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
+});
+
+Broadcast::channel('reply.{replyId}', function ($user, Reply $reply) {
+    return $user->id === $reply->user_id;
 });

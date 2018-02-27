@@ -8,8 +8,13 @@ class Reply extends Model
 {
     protected $guarded = [];
 
-    public function feedback ()
+    public function feedback()
     {
         return $this->belongsTo('App\Feedback');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }
