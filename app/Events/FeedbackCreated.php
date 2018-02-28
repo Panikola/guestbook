@@ -3,6 +3,7 @@
 namespace App\Events;
 
 use App\Feedback;
+use App\Http\Resources\Feedback as FeedbackResource;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -24,7 +25,7 @@ class FeedbackCreated implements ShouldBroadcast
      */
     public function __construct(Feedback $feedback)
     {
-        $this->feedback = $feedback;
+        $this->feedback = new FeedbackResource($feedback);
     }
 
     /**
@@ -34,6 +35,6 @@ class FeedbackCreated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('feedback.'.$this->feedback);
+        return new Channel('feedback');
     }
 }

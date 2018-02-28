@@ -1,13 +1,19 @@
 To install:
-* git clone
+* git clone https://github.com/Panikola/guestbook.git
 * composer install
+* npm install
+* rename .env.example to .env, fill APP_URL, DB_DATABASE, DB_USERNAME, DB_PASSWORD
 * php artisan key:generate
-* rename .env.example to .env and fill APP_URL, DB_DATABASE, DB_USERNAME, DB_PASSWORD
 * php artisan migrate:refresh --seed
 * php artisan passport:install --force
 
 For testing:
-* import guestbook.postman_collection.json and Dev.postman_environment.json to Postman
-* Select Dev environment and provide your host name in hostName environment variable
-* Make register user1 request and copy token from response
-* Add token to Authorized requests folder authorization property
+* Open Postman
+* Import postman_collection.json and environment from postman_environment.json
+* Select Dev environment. Provide your host name in hostName environment variable
+* Make "register user1" request. Copy token from response, email and password from body
+* Make "register user2" request. Copy token from response, email and password from body
+* Change token in "Authorized requests" folder auth property
+* Log in user in browser with email and password
+
+Now you can make requests in Postman and monitor notifications in browser

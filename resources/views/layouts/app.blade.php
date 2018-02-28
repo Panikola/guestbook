@@ -35,7 +35,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                            {{--<li><a class="nav-link" href="{{ route('register') }}">Register</a></li>--}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,6 +66,11 @@
     </div>
 
     <!-- Scripts -->
+
+    <script>
+        var userID = @auth"{{ \Illuminate\Support\Facades\Auth::user()->id }}"@else""@endauth;
+    </script>
+
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

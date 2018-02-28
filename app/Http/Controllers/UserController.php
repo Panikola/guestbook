@@ -16,8 +16,7 @@ class UserController extends Controller
 
         if (Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
             $user = Auth::user();
-            Auth::login($user, true);
-//            return response()->json(['success' => $user], 200);
+//            Auth::login($user, true);
             return new UserResource($user);
         } else {
             return response()->json(['error' => 'Unauthorised'], 401);
@@ -56,9 +55,6 @@ class UserController extends Controller
     public function userInfo()
     {
         $user = Auth::user();
-
-//        return response()->json(['success' => $user], 200);
         return new UserResource($user);
-
     }
 }

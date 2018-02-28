@@ -3,6 +3,7 @@
 namespace App\Events;
 
 use App\Reply;
+use App\Http\Resources\Reply as ReplyResource;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -20,7 +21,7 @@ class ReplyCreated implements ShouldBroadcast
 
     public function __construct(Reply $reply)
     {
-        $this->reply = $reply;
+        $this->reply = new ReplyResource($reply);
     }
 
     /**
@@ -30,6 +31,8 @@ class ReplyCreated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('reply.'.$this->reply->id);
+        $userId = $this->reply->feedback->user->id;
+
+        return new PrivateChannel('reply.'.$this->reply->feedback->user->id);
     }
 }
