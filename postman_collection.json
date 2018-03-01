@@ -11,7 +11,7 @@
 			"description": "",
 			"item": [
 				{
-					"name": "Add feedback api/feedback",
+					"name": "Get user info api/user-info",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -20,24 +20,14 @@
 								"value": "application/json'"
 							}
 						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "body",
-									"value": "jjjjjjjjj",
-									"description": "",
-									"type": "text"
-								}
-							]
-						},
+						"body": {},
 						"url": {
-							"raw": "{{hostName}}api/feedback?XDEBUG_SESSION_START=PHPSTORM",
+							"raw": "{{hostName}}api/user-info?XDEBUG_SESSION_START=PHPSTORM",
 							"host": [
 								"{{hostName}}api"
 							],
 							"path": [
-								"feedback"
+								"user-info"
 							],
 							"query": [
 								{
@@ -47,7 +37,7 @@
 								}
 							]
 						},
-						"description": ""
+						"description": null
 					},
 					"response": []
 				},
@@ -95,7 +85,7 @@
 					"response": []
 				},
 				{
-					"name": "Get user info api/user-info",
+					"name": "Add feedback api/feedback",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -104,14 +94,24 @@
 								"value": "application/json'"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "body",
+									"value": "jjjjjjjjj",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "{{hostName}}api/user-info?XDEBUG_SESSION_START=PHPSTORM",
+							"raw": "{{hostName}}api/feedback?XDEBUG_SESSION_START=PHPSTORM",
 							"host": [
 								"{{hostName}}api"
 							],
 							"path": [
-								"user-info"
+								"feedback"
 							],
 							"query": [
 								{
@@ -121,7 +121,7 @@
 								}
 							]
 						},
-						"description": null
+						"description": ""
 					},
 					"response": []
 				}
@@ -442,53 +442,6 @@
 			"response": []
 		},
 		{
-			"name": "Login user2 (user)  /api/login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json'"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "email",
-							"value": "2@user.com",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "123456",
-							"description": "",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{hostName}}api/login?XDEBUG_SESSION_START=PHPSTORM",
-					"host": [
-						"{{hostName}}api"
-					],
-					"path": [
-						"login"
-					],
-					"query": [
-						{
-							"key": "XDEBUG_SESSION_START",
-							"value": "PHPSTORM",
-							"equals": true
-						}
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
 			"name": "Register user1 (admin)  /api/register",
 			"request": {
 				"method": "POST",
@@ -619,6 +572,53 @@
 					],
 					"path": [
 						"register"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login user2 (user)  /api/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json'"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "2@user.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{hostName}}api/login?XDEBUG_SESSION_START=PHPSTORM",
+					"host": [
+						"{{hostName}}api"
+					],
+					"path": [
+						"login"
 					],
 					"query": [
 						{

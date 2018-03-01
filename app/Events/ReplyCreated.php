@@ -31,8 +31,11 @@ class ReplyCreated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        $userId = $this->reply->feedback->user->id;
-
         return new PrivateChannel('reply.'.$this->reply->feedback->user->id);
+    }
+
+    public function tags()
+    {
+        return ['Reply-Created', 'id:'.$this->reply->id, 'on id:'.$this->reply->feedback->id];
     }
 }

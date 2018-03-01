@@ -37,4 +37,14 @@ class FeedbackCreated implements ShouldBroadcast
     {
         return new Channel('feedback');
     }
+
+    /**
+     * Get the tags that should be assigned to the job. for Horizon
+     *
+     * @return array
+     */
+    public function tags()
+    {
+        return ['Feedback-Created', 'id:'.$this->feedback->id];
+    }
 }

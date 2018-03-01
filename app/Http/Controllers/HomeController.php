@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   Redis::set('ghbdtn','vbh');
         return view('home');
     }
 }

@@ -19,6 +19,7 @@
     "lodash": "^4.17.4",
     "popper.js": "^1.12",
     "pusher-js": "^4.2.2",
+    "socket.io-client": "^2.0.4",
     "vue": "^2.5.7"
   }
 }

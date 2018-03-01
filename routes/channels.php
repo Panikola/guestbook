@@ -11,14 +11,7 @@
 |
 */
 
-use App\Reply;
-
-//Broadcast::channel('App.User.{id}', function ($user, $id) {
-//    return (int) $user->id === (int) $id;
-//});
-
 Broadcast::channel('reply.{userId}', function ($user, $userId) {
-
-    return true;
-//    return (int) $user->id === (int) $userId;
+    $userid = $userId;
+    return (int) $user->id === (int) $userId;
 });
