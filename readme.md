@@ -10,6 +10,7 @@ npm install -g laravel-echo-server
 php artisan key:generate
 php artisan migrate:refresh --seed
 php artisan passport:install --force
+laravel-echo-server init
 ```
 
 For testing:

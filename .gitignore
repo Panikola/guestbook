@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 /.idea
+/laravel-echo-server.json
 /.vscode
 /.vagrant
 Homestead.json
